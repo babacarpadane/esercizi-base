@@ -1,0 +1,23 @@
+package esercizio_base_2;
+
+public class Articolo {
+	
+	private int id;
+	private String codice;
+	private String descrizione;
+	private int quantita;
+	
+	public void get() {
+		
+	}
+	
+    public void set() {
+		
+	}
+    
+    @Override
+	public String toString(){
+		return "Articolo: "+id+"; Codice: "+codice+"; Descrizione: "+descrizione+"; Quantità: "+quantita;
+	}
+
+}

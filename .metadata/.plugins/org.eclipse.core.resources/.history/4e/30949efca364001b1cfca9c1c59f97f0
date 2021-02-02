@@ -1,0 +1,10 @@
+package esercizio_base_3;
+
+public class GestioneFileMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

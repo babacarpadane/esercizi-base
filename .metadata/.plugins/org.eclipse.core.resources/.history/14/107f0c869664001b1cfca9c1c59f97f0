@@ -1,0 +1,56 @@
+package esercizio_base_3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import prog.io.ConsoleInputManager;
+
+import esercizio_base_2.Articolo;
+
+public class LettoreFile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Articolo> lista=new ArrayList<Articolo>();
+		FileReader file;
+		try {
+			file = new FileReader("articoli.csv");
+			BufferedReader br=new BufferedReader(file);
+	        
+			for (int i=0; i<10; i++){
+				String [] ausiliari=br.readLine().split(";");
+				Articolo art=new Articolo();
+				art.setId(Integer.parseInt(ausiliari[0]));
+				art.setCodice(ausiliari[1]);
+				art.setDescrizione(ausiliari[2]);
+				art.setQuantita(Integer.parseInt(ausiliari[3]));
+				lista.add(art);
+			}
+			
+		
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(lista.toString());
+		
+		boolean c;
+		do {
+			ConsoleInputManager in=new ConsoleInputManager();
+			c=in.readSiNo("Vuoi inserire un nuovo articolo?");
+			if(c==true) {
+			    
+			    Articolo artic=new Articolo();
+			    artic.setId(in.readInt("Inserisci l'ID "));
+			    artic.setCodice(in.readLine("Inserisci il codice "));
+			    artic.setDescrizione(in.readLine("Inserisci la descrizione "));
+			    artic.setQuantita(in.readInt("Inserisci la quantità "));
+			    
+			}
+			
+		} while (c==true);
+		
+	}
+
+}

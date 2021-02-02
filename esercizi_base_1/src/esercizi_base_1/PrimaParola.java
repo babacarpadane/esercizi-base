@@ -1,0 +1,23 @@
+package esercizi_base_1;
+import prog.io.ConsoleInputManager;
+
+public class PrimaParola {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ConsoleInputManager in = new ConsoleInputManager();
+		String s=in.readLine("Inserisci una frase");
+		int count=0;
+		
+		for(int i=0; i<s.length(); i++) {
+			if(s.charAt(i)!=' ') {
+				count++;
+			} else break;
+		}
+		
+		System.out.println(s.substring(0, count));
+
+	}
+
+}

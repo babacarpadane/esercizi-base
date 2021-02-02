@@ -1,0 +1,23 @@
+package esercizio_base_4;
+
+public class SalutatoreFormale implements Salutatore{
+
+	@Override
+	public String salutaMattino(String name) {
+		// TODO Auto-generated method stub
+		return " Buongiorno";
+	}
+
+	@Override
+	public String salutaSera(String name) {
+		// TODO Auto-generated method stub
+		return " Buonasera";
+	}
+
+	@Override
+	public String salutaNotte(String name) {
+		// TODO Auto-generated method stub
+		return " Buonanotte";
+	}
+
+}

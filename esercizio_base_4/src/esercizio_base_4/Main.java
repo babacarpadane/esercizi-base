@@ -1,0 +1,30 @@
+package esercizio_base_4;
+import prog.io.ConsoleInputManager;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ConsoleInputManager in=new ConsoleInputManager();
+		String nome=in.readLine("Inserisci un nome ");
+		char c;
+		do {
+			c=in.readChar("Premi 'y' per un saluto formale o 'n' per un saluto informale");
+		}while(c!='y' && c!='n');
+		int ora=in.readInt("Inserisci l'ora");
+		
+		if(c=='y') {
+			SalutatoreFormale saluto=new SalutatoreFormale();
+			if(ora>5 && ora<14) System.out.println(saluto.salutaMattino(nome));
+			if(ora>13 && ora<23) System.out.println(saluto.salutaSera(nome));
+			if(ora>22 && ora<6) System.out.println(saluto.salutaNotte(nome));
+		} else {
+			SalutatoreInformale saluto=new SalutatoreInformale();
+			if(ora>5 && ora<14) System.out.println(saluto.salutaMattino(nome));
+			if(ora>13 && ora<23) System.out.println(saluto.salutaSera(nome));
+			if(ora>22 && ora<6) System.out.println(saluto.salutaNotte(nome));
+		}
+
+	}
+
+}

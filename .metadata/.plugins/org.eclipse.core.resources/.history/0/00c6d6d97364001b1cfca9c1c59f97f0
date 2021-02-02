@@ -1,0 +1,18 @@
+package esercizio_base_2;
+
+public class Articolo {
+	
+	int id;
+	String codice;
+	String descrizione;
+	int quantita;
+	
+	public void get() {
+		
+	}
+	
+    public void set() {
+		
+	}
+
+}

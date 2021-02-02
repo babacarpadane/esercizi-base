@@ -1,0 +1,119 @@
+package esercizio_base_3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import prog.io.ConsoleInputManager;
+
+import esercizio_base_2.Articolo;
+
+public class GestioneFileMap implements Map<String, Articolo>{
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//System.out.println(lista.toString());
+		ConsoleInputManager in=new ConsoleInputManager();
+		FileReader file;
+		Map<String, Articolo> mappa= new HashMap<String, Articolo>();
+		try {
+		   file = new FileReader("articoli.csv");
+		   BufferedReader br=new BufferedReader(file);
+		    
+		   for (int i=0; i<10; i++){
+			   String [] ausiliari=br.readLine().split(";");
+			   Articolo art=new Articolo();
+			   art.setId(Integer.parseInt(ausiliari[0]));
+			   art.setCodice(ausiliari[1]);
+			   art.setDescrizione(ausiliari[2]);
+			   art.setQuantita(Integer.parseInt(ausiliari[3]));
+			   mappa.put(art.getCodice(), art);	
+		   }
+		   file.close();
+	    } catch (Exception e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+	    }
+		
+		String chiave=in.readLine("Inserisi il codice dell'articolo che vuoi stampare");
+		if(mappa.containsKey(chiave)) System.out.println(mappa.get(chiave));
+		else System.out.println("Il codice inserito non è presente nella mappa");
+		
+	
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean containsKey(Object key) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean containsValue(Object value) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Set<Entry<String, Articolo>> entrySet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Articolo get(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Set<String> keySet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Articolo put(String key, Articolo value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void putAll(Map<? extends String, ? extends Articolo> m) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Articolo remove(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Collection<Articolo> values() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

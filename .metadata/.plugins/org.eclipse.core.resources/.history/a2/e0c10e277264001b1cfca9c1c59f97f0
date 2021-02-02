@@ -1,0 +1,14 @@
+package esercizio_base_2;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Articolo> lista_articoli= ArrayList<Articolo>();
+
+	}
+
+}

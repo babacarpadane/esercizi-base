@@ -1,0 +1,13 @@
+package esercizio_base_4;
+import prog.io.ConsoleInputManager;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ConsoleInputManager in=new ConsoleInputManager();
+		String nome=in.readLine("Inserisci un nome ");
+
+	}
+
+}

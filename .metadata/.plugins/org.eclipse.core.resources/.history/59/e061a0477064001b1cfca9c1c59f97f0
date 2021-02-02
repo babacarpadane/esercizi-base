@@ -1,0 +1,15 @@
+package esercizi_base_1;
+import prog.io.ConsoleInputManager;
+
+public class PrimaParola {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ConsoleInputManager in = new ConsoleInputManager();
+		String s=in.readLine("Inserisci una frase");
+		
+
+	}
+
+}

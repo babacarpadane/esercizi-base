@@ -1,0 +1,17 @@
+package esercizio_base_2;
+
+public class Articolo {
+	
+	int id;
+	String codice;
+	String descrizione;
+	int quantita;
+	
+	public Articolo() {
+		this.id=id;
+		this.codice=codice;
+		this.descrizione=descrizione;
+		this.quantita=quantita;
+	}
+
+}
